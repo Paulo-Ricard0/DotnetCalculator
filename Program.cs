@@ -1,13 +1,22 @@
 ﻿namespace Calculator
 {
-    class Program
+  class Program
+  {
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.Clear();
-            Console.WriteLine("Primeiro Valor: ");
-            float num1 = float.Parse(Console.ReadLine());
-            Console.WriteLine(num1);
-        }
+      Addition();
     }
+
+    static void Addition()
+    {
+      Console.Clear();
+      Console.WriteLine("Primeiro Valor:");
+      float firstOperator = float.Parse(Console.ReadLine());
+      Console.WriteLine("Segundo Valor:");
+      float secondOperator = float.Parse(Console.ReadLine());
+      Console.Clear();
+      float result = firstOperator + secondOperator;
+      Console.WriteLine($"O resultado da soma é: {result}");
+    }
+  }
 }
