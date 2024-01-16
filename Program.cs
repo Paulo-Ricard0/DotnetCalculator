@@ -15,6 +15,7 @@
       Console.WriteLine("2 - Subtração");
       Console.WriteLine("3 - Divisão");
       Console.WriteLine("4 - Multiplicação");
+      Console.WriteLine("5 - Sair");
 
       Console.WriteLine("\n-----------------\n");
       Console.WriteLine("Selecione uma opção: ");
@@ -34,7 +35,11 @@
         case 4:
           Multiplication();
           break;
+        case 5:
+          System.Environment.Exit(0);
+          break;
         default:
+          Menu();
           break;
       }
     }
@@ -50,7 +55,9 @@
 
       Console.Clear();
       float result = firstOperator + secondOperator;
-      Console.WriteLine($"O resultado da subtração é: {result}");
+      Console.WriteLine($"O resultado da soma é: {result}");
+      Console.ReadKey();
+      Menu();
     }
 
     static void Subtraction()
@@ -64,8 +71,9 @@
 
       Console.Clear();
       float result = firstOperator - secondOperator;
-      Console.WriteLine($"O resultado da soma é: {result}");
+      Console.WriteLine($"O resultado da subtração é: {result}");
       Console.ReadKey();
+      Menu();
     }
 
     static void Division()
@@ -79,8 +87,9 @@
 
       Console.Clear();
       float result = firstOperator / secondOperator;
-      Console.WriteLine($"O resultado da soma é: {result}");
+      Console.WriteLine($"O resultado da divisão é: {result}");
       Console.ReadKey();
+      Menu();
     }
 
     static void Multiplication()
@@ -94,8 +103,9 @@
 
       Console.Clear();
       float result = firstOperator * secondOperator;
-      Console.WriteLine($"O resultado da soma é: {result}");
+      Console.WriteLine($"O resultado da multiplicação é: {result}");
       Console.ReadKey();
+      Menu();
     }
   }
 }
